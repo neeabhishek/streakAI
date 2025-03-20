@@ -4,7 +4,7 @@ set -e
 
 #Starting the Container
 echo "** Starting the Container **" 
-/usr/bin/docker run -it -d -p 8077:5000 --name=StreakAI neeabhishek/streak_ai:=latest
+/usr/bin/docker run -it -d -p 8077:5000 --name=StreakAI neeabhishek/streak_ai:latest
 
 #Validate the Container
 echo "** Validating the Container **"
