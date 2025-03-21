@@ -1,0 +1,26 @@
+Task Overview:
+
+You need to set up a Jenkins server and create an automated Continuous Integration (CI) pipeline. The pipeline will automate the process of building a Docker image for a Python application and pushing that image to a Docker repository. The key goal is to make the Docker image as lightweight as possible while ensuring the application runs correctly. After pushing the image to the Docker repository, the workspace should be cleaned up, and local Docker images should be deleted.
+
+Scenario:
+
+You are required to set up a Jenkins pipeline that runs locally and builds a Docker image for a Flask-based Python application. The pipeline should execute all steps on your local machine, including:
+
+1.Cloning the Repository: Fetch the provided Python application from a Git repository (create your own repo).
+2.Building the Docker Image Locally: Create a lightweight Docker image for the Flask application.
+3.Running the Container Locally: Run the Docker container and confirm that the API is 
+Working.
+4.Running Automated Tests: Write a shell script (test_api.sh) that verifies the /add API endpoint.
+5.Cleaning Up: Remove the Docker image and clean the Jenkins workspace after execution.
+
+Requirements:
+
+Install and run Jenkins locally.
+Install and run Docker locally.
+Write a shell script (test_api.sh) that:
+Starts the Flask application inside a Docker container.
+Send a request to the /add endpoint with two numbers.
+Validates that the response matches the expected sum.
+Exits with status 0 on success and status 1 on failure.
+Modify the Jenkins pipeline (Jenkinsfile) to execute the shell script in the Test stage.
+
